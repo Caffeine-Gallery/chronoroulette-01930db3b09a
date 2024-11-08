@@ -1,0 +1,13 @@
+type Crystal = 
+ record {
+   color: text;
+   growing: bool;
+   id: nat;
+   pattern: nat;
+   size: float64;
+ };
+service : {
+  createCrystal: () -> (nat);
+  getCrystals: () -> (vec Crystal) query;
+  toggleGrowth: (nat) -> ();
+}
